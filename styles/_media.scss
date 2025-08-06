@@ -16,6 +16,9 @@
     .timeline {
         grid-template-columns: 1fr;
         padding-bottom: 6rem;
+        ul {
+            display: none;
+        }
     }
 
     .about-stats {
@@ -63,6 +66,7 @@
         .right-contact {
             margin-left: 0;
             margin-top: 2.5rem;
+            min-height: 80vh;
         }
     }
 
@@ -132,6 +136,7 @@
         grid-row: 1;
         width: 90%;
         margin: 0 auto;
+        margin-top: 2rem;
         .name {
             font-size: 2rem !important;
         }
