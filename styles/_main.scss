@@ -436,43 +436,51 @@ li {
                         height: 100%;
                         background-color: var(--color-secondary);
                         transition: var(--transition);
-                        width: 50%;
+                        width: 0%;
                     }
 
-                    .html {
-                        width: 95%;
+                    .html5_css3 {
+                        width: 0%;
                     }
 
-                    .css {
-                        width: 85%;
+                    .react {
+                        width: 0%;
                     }
 
                     .javascript {
-                        width: 90%;
+                        width: 0%;
+                    }
+
+                    .node {
+                        width: 0%;
+                    }
+
+                    .WordPress {
+                        width: 0%;
+                    }
+
+                    .mongodb {
+                        width: 0%;
                     }
 
                     .sql {
-                        width: 90%;
-                    }
-
-                    .python {
-                        width: 70%;
-                    }
-
-                    .php {
-                        width: 65%;
+                        width: 0%;
                     }
 
                     .monggodb {
-                        width: 90%;
+                        width: 0%;
                     }
 
-                    .wordpress {
-                        width: 95%;
+                    .git {
+                        width: 0%;
                     }
 
-                    .github {
-                        width: 90%;
+                    .php {
+                        width: 0%;
+                    }
+
+                    .python {
+                        width: 0%;
                     }
                 }
             }

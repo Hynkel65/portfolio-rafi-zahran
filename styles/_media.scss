@@ -3,7 +3,7 @@
         grid-template-columns: 1fr;
     }
 
-    .timeline ul {
+    .job-desc {
         display: none;
     }
 
@@ -21,6 +21,10 @@
     .abt-text {
         flex-direction: column;
         margin: 0;
+    }
+
+    .progress-bars{
+        grid-template-columns: none !important;
     }
 
     .section {
@@ -123,6 +127,14 @@
     .timeline {
         grid-template-columns: none;
         grid-template-rows: repeat(2, 1fr);
+    }
+
+    .contact-content-con {
+        flex-direction: column;
+    }
+
+    .contact-icon {
+        justify-content: center;
     }
 
     .controls {
