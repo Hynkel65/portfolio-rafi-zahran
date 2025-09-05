@@ -573,67 +573,124 @@ li {
 
 .portfolios {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
     margin-top: 3rem;
 
     .portfolio-item {
         position: relative;
+        max-height: 25em;
+        overflow: hidden;
+        border-radius: 15px;
+        transition: transform 0.3s ease-in-out;
 
         img {
             width: 100%;
-            height: 200px;
+            height: 100%;
             object-fit: cover;
             border-radius: 15px;
+            transition: var(--transition);
         }
 
         .hover-items {
             width: 100%;
             height: 100%;
-            background-color: var(--color-secondary);
             position: absolute;
             left: 0;
-            top: 0;
+            bottom: 0;
             border-radius: 15px;
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
             flex-direction: column;
             opacity: 0;
-            transform: scale(0);
-            transition: var(--transition);
+            transition: opacity 0.4s ease-in-out;
+            pointer-events: none;
+        }
 
-            h3 {
-                font-size: 1.5rem;
+        .description-overlay {
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0) 100%);
+            color: var(--color-white);
+            padding: 1.5rem 1rem 1rem;
+            font-size: 1rem;
+            text-align: center;
+            position: relative;
+            pointer-events: auto;
+            flex-grow: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .description {
+            padding-bottom: 0.5rem;
+        }
+
+        .project-link {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            pointer-events: auto;
+
+            a {
+                background: var(--color-secondary);
                 color: var(--color-white);
-                margin-bottom: 1.5rem;
-            }
-
-            .icons {
-                background-color: var(--color-primary);
-                border-radius: 50%;
-                width: 50px;
-                height: 50px;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                margin: 0 1rem;
-                cursor: pointer;
+                gap: 0.5rem;
                 transition: var(--transition);
 
-                i {
-                    font-size: 1.5rem;
-                    color: var(--color-white);
-                    margin: 0 1rem;
-                }
-
                 &:hover {
-                    background-color: var(--color-white);
-
-                    i {
-                        color: var(--color-primary);
-                    }
+                    background: var(--color-white);
+                    color: var(--color-primary);
                 }
+            }
+        }
+
+        // New styles for the click-to-expand functionality
+        .long-description {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+            padding: 0 1rem;
+            color: var(--color-white);
+            background-color: var(--color-grey-dark-2);
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+
+            h3 {
+                padding-top: 1rem;
+            }
+        }
+        
+        // State for when an item is clicked
+        &.active {
+            .long-description {
+                max-height: 500px;
+                padding: 1rem;
+            }
+
+            .hover-items {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+
+        // Hover effect for the whole portfolio item
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-5px);
+
+            .hover-items {
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            img {
+                transform: scale(1.05);
             }
         }
     }
@@ -641,7 +698,11 @@ li {
 
 .portfolio-item:hover .hover-items {
     opacity: 1;
-    transform: scale(1);
+    pointer-events: auto; /* Enable pointer events on hover */
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05); /* Slightly scale the image on hover */
 }
 
 
