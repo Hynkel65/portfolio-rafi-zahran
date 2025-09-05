@@ -10,20 +10,22 @@
     .left-about {
         display: none;
     }
+
     header {
         padding: 0 !important;
     }
 
-    .right-about{
+    .right-about {
         min-height: fit-content;
         min-width: min-content
     }
+
     .abt-text {
         flex-direction: column;
         margin: 0;
     }
 
-    .progress-bars{
+    .progress-bars {
         grid-template-columns: none !important;
     }
 
@@ -62,6 +64,13 @@
 
     .portfolios {
         grid-template-columns: 1fr 1fr;
+
+        .portfolio-item {
+            img {
+                width: auto;
+            }
+        }
+
     }
 
     .main-title {
@@ -127,6 +136,18 @@
     .timeline {
         grid-template-columns: none;
         grid-template-rows: repeat(2, 1fr);
+    }
+
+
+    .portfolios {
+        grid-template-columns: none;
+        .portfolio-item {
+            img {
+                display: block;
+                margin: auto;
+                width: 150%;
+            }
+        }
     }
 
     .contact-content-con {
