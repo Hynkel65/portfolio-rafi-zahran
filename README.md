@@ -36,16 +36,21 @@ Managed the project repository using Git.
 <div align="center">
   <img src="screenshots/home.png" alt="Home">
 </div>
+
 ----------------
+
 <div align="center">
-  <img src="screenshots/about" alt="About">
+  <img src="screenshots/about.png" alt="About">
 </div>
+
 ----------------
+
 <div align="center">
   <img src="screenshots/portofolio.png" alt="Portofolio">
 </div>
+
 ----------------
+
 <div align="center">
   <img src="screenshots/contact.png" alt="Contact">
 </div>
-----------------
