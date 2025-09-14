@@ -54,7 +54,7 @@
         });
     }
 
-    // ** Corrected Portfolio Click Functionality **
+    // Corrected Portfolio Click Functionality
     function setupPortfolioClicks() {
         const portfolioItems = document.querySelectorAll('.portfolio-item');
         
